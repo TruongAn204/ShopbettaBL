@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán & Đặt Hàng - Shop Betta Bạc Liêu</title>
+  <meta name="description" content="Điền thông tin nhận hàng và chọn phương thức thanh toán an toàn, bảo mật.">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/cart.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" title="Shop Betta AN Bạc Liêu">
+        <img src="assets/images/logo.png" alt="Shop Betta AN Bạc Liêu" class="brand-logo-img" />
+      </a>
+
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="header-search-input" placeholder="Tìm kiếm sản phẩm..." />
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="products.html" class="nav-link">Sản Phẩm</a>
+        <a href="cart.html" class="nav-link">Giỏ Hàng</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" id="theme-toggle" title="Đổi giao diện Sáng/Tối">🌙</button>
+        <a href="cart.html" class="action-btn" id="cart-icon-btn" title="Giỏ hàng">
+          🛒
+          <span class="badge-count cart-badge" style="display: none;">0</span>
+        </a>
+        <div class="header-auth-slot">
+          <a href="login.html" class="btn btn-sm btn-primary">Đăng nhập</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section-padding">
+    <h1 style="font-size: 2rem; margin-bottom: 2rem;">Thanh Toán Đơn Hàng 🛍️</h1>
+
+    <form id="checkout-form">
+      <div class="checkout-grid">
+        <!-- Left: Delivery Details & Payment -->
+        <div>
+          <!-- Step 1: Info -->
+          <div class="checkout-box">
+            <h2 class="checkout-box-title">
+              <span class="checkout-step-num">1</span> Thông Tin Giao Nhận Cá
+            </h2>
+
+            <div class="form-group">
+              <label class="form-label" for="checkout-fullname">Họ và tên người nhận cá *</label>
+              <input type="text" id="checkout-fullname" class="form-input" placeholder="Ví dụ: Nguyễn Văn A" required />
+            </div>
+
+            <div class="grid-cols-2">
+              <div class="form-group">
+                <label class="form-label" for="checkout-phone">Số điện thoại liên hệ *</label>
+                <input type="tel" id="checkout-phone" class="form-input" placeholder="0988xxxxxx" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="checkout-email">Địa chỉ Email</label>
+                <input type="email" id="checkout-email" class="form-input" placeholder="email@gmail.com" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="checkout-address">Địa chỉ chi tiết (Số nhà, đường, phường/xã, tỉnh/TP) *</label>
+              <input type="text" id="checkout-address" class="form-input" placeholder="Ví dụ: 123 Đường Trần Phú, Phường 7, TP. Bạc Liêu" required />
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="checkout-notes">Ghi chú khi giao hàng (tùy chọn)</label>
+              <textarea id="checkout-notes" class="form-textarea" rows="2" placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi giao, chèn thêm xốp..."></textarea>
+            </div>
+          </div>
+
+          <!-- Step 2: Payment -->
+          <div class="checkout-box">
+            <h2 class="checkout-box-title">
+              <span class="checkout-step-num">2</span> Phương Thức Thanh Toán
+            </h2>
+
+            <div class="payment-methods-grid">
+              <label class="payment-option selected">
+                <input type="radio" name="payment-method" value="COD" checked />
+                <div class="payment-option-label">
+                  <div class="payment-option-title">💵 Thanh toán khi nhận hàng (Ship COD)</div>
+                  <div class="payment-option-desc">Kiểm tra thùng cá cùng shipper trước khi thanh toán tiền mặt.</div>
+                </div>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="BANK_TRANSFER" />
+                <div class="payment-option-label">
+                  <div class="payment-option-title">🏦 Chuyển khoản ngân hàng (Vietcombank / MBBank)</div>
+                  <div class="payment-option-desc">Nhận mã QR thanh toán nhanh chóng, xác nhận tự động.</div>
+                </div>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="MOMO" />
+                <div class="payment-option-label">
+                  <div class="payment-option-title">📱 Ví điện tử MoMo / VNPay QR</div>
+                  <div class="payment-option-desc">Quét mã tiện lợi qua ứng dụng ví điện tử MoMo hoặc app ngân hàng.</div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Summary Review -->
+        <div>
+          <div class="summary-card" style="position: sticky; top: calc(var(--header-height) + 1.5rem);">
+            <div class="summary-title">Đơn Hàng Của Bạn</div>
+            
+            <div id="checkout-items-list" style="margin-bottom: 1.5rem; max-height: 240px; overflow-y: auto;">
+              <!-- Items loaded via checkout.js -->
+            </div>
+
+            <div class="summary-row">
+              <span>Tạm tính:</span>
+              <span id="checkout-subtotal" style="font-weight: 700;">0 ₫</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Phí vận chuyển cá:</span>
+              <span id="checkout-shipping" style="font-weight: 700;">35.000 ₫</span>
+            </div>
+
+            <div class="summary-row total-row">
+              <span>Tổng thanh toán:</span>
+              <span class="total-amount" id="checkout-total">0 ₫</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-submit-order" style="margin-top: 1.5rem;">
+              Xác Nhận Đặt Hàng 🚀
+            </button>
+
+            <div style="font-size: 0.775rem; color: var(--text-muted); text-align: center; margin-top: 1rem;">
+              🔒 Cam kết bảo mật thông tin & bảo hiểm 100% cá sống khỏe tới tay khách.
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="order-success-modal">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 style="color: var(--success); display: flex; align-items: center; gap: 0.5rem;">
+            <span>✓</span> Đặt Hàng Thành Công!
+          </h3>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <div style="font-size: 3.5rem; margin-bottom: 1rem;">🎉</div>
+          <h4 style="margin-bottom: 0.5rem;">Cảm ơn bạn đã tin tưởng Shop Betta BL!</h4>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Đơn hàng của bạn đã được tiếp nhận và nhân viên sẽ gọi điện xác nhận trong ít phút để chuẩn bị đóng gói nén oxy an toàn.
+          </p>
+          <div style="background: var(--bg-subtle); padding: 1rem; border-radius: var(--radius-md); text-align: left; margin-bottom: 1rem; font-size: 0.9rem;">
+            <div style="margin-bottom: 0.5rem;">Mã đơn hàng: <strong id="modal-order-code" style="color: var(--primary);">BL-000000</strong></div>
+            <div>Tổng số tiền: <strong id="modal-order-total" style="color: var(--accent);">0 ₫</strong></div>
+          </div>
+        </div>
+        <div class="modal-footer" style="justify-content: center;">
+          <a href="index.html" class="btn btn-primary">Trở Về Trang Chủ</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <div>© 2026 Shop Betta Bạc Liêu. All rights reserved.</div>
+      <div class="payment-methods">
+        <span class="payment-badge">COD</span>
+        <span class="payment-badge">VNPAY</span>
+        <span class="payment-badge">MOMO</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/components/header.js"></script>
+  <script type="module" src="js/pages/checkout.js"></script>
+</body>
+</html>

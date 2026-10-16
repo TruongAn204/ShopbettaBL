@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Betta Bạc Liêu - Thế Giới Cá Cảnh Thủy Sinh Đẳng Cấp</title>
+  <meta name="description"
+    content="Shop Betta BL chuyên cung cấp các dòng cá Betta thuần chủng, Halfmoon, Plakat, Crowntail, Dumbo, cá thủy sinh và phụ kiện nuôi cá cao cấp tại Bạc Liêu và giao hàng toàn quốc.">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+
+<body>
+  <!-- Top Promotion Bar -->
+  <div class="top-bar">
+    <span>🎉 <strong>KHUYẾN MÃI ĐẶC BIỆT:</strong> Nhập mã <strong>BETTA10</strong> giảm ngay 10% cho đơn hàng đầu tiên!
+      Giao cá an toàn tận nhà.</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="header-brand-logo" title="Shop Betta AN Bạc Liêu">
+        <img src="assets/images/logo.png" alt="Shop Betta AN Bạc Liêu" class="brand-logo-img" />
+      </a>
+
+      <!-- Search Bar -->
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="header-search-input" placeholder="Tìm kiếm cá Halfmoon, Plakat, Samurai, hồ cá..." />
+      </div>
+
+      <!-- Nav Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Trang Chủ</a>
+        <a href="products.html" class="nav-link">Sản Phẩm</a>
+        <a href="products.html?category=cat_halfmoon" class="nav-link">Halfmoon</a>
+        <a href="products.html?category=cat_plakat" class="nav-link">Plakat</a>
+        <a href="products.html?category=cat_accessories" class="nav-link">Phụ Kiện</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="action-btn" id="theme-toggle" title="Đổi giao diện Sáng/Tối">🌙</button>
+
+        <a href="cart.html" class="action-btn" id="cart-icon-btn" title="Giỏ hàng">
+          🛒
+          <span class="badge-count cart-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Dynamic Auth Slot -->
+        <div class="header-auth-slot">
+          <a href="login.html" class="btn btn-sm btn-primary">Đăng nhập</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">✨ Trại Cá Betta Uy Tín Số 1 Miền Tây</div>
+            <h1 class="hero-title">
+              Nâng Tầm Đam Mê Với Dòng Cá <span class="text-gradient">Betta Đỉnh Cao</span>
+            </h1>
+            <p class="hero-desc">
+              Khám phá bộ sưu tập cá Betta tuyển chọn độc quyền từ Bạc Liêu: Halfmoon kiêu sa, Plakat dũng mãnh, Koi
+              Galaxy huyền ảo. Bảo hành sống khỏe 100% khi nhận hàng.
+            </p>
+            <div class="hero-cta">
+              <a href="products.html" class="btn btn-primary btn-lg">Khám Phá Bộ Sưu Tập 🐠</a>
+              <a href="products.html?sort=price-desc" class="btn btn-secondary btn-lg">Dòng Cá Cao Cấp</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h4>5,000+</h4>
+                <p>Khách hàng tin tưởng</p>
+              </div>
+              <div class="stat-item">
+                <h4>100%</h4>
+                <p>Bảo hành cá sống khỏe</p>
+              </div>
+              <div class="stat-item">
+                <h4>4.9 ★</h4>
+                <p>Đánh giá tích cực</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-card">
+              <img src="assets/images/hero-banner.jpg"
+                onerror="this.onerror=null; this.src='assets/images/placeholder.svg';"
+                alt="Cặp Cá Betta Thuần Chủng Tuyệt Đẹp" />
+            </div>
+            <div class="hero-floating-card">
+              <div class="floating-icon">🏆</div>
+              <div>
+                <h4 style="font-size: 0.95rem; margin-bottom: 2px;">Cá Chuẩn Form Thi Đấu</h4>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Tuyển chọn kỹ càng từng cá thể</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div>
+            <div class="section-subtitle">Danh mục nổi bật</div>
+            <h2 class="section-title">Khám Phá Theo Dòng Cá</h2>
+          </div>
+          <a href="products.html" class="btn btn-outline btn-sm">Xem tất cả dòng cá &rarr;</a>
+        </div>
+        <div class="grid-cols-4" id="categories-grid">
+          <!-- Dynamic categories loaded via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Flash Sale Countdown Banner -->
+    <section class="container">
+      <div class="flash-sale-box">
+        <div class="flash-sale-content">
+          <span class="badge badge-sale" style="margin-bottom: 1rem;">Flash Sale Hôm Nay</span>
+          <h2>Cơ Hội Sở Hữu Betta Đột Biến Giảm Đến 30%</h2>
+          <p>Ưu đãi giới hạn chỉ diễn ra trong ngày dành cho 50 chú cá Betta đầu tiên được xuất bán trực tiếp từ trại
+            Bạc Liêu.</p>
+          <div class="countdown-timer">
+            <div class="countdown-item">
+              <div class="countdown-num" id="cd-hours">14</div>
+              <div class="countdown-label">Giờ</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-num" id="cd-mins">45</div>
+              <div class="countdown-label">Phút</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-num" id="cd-secs">20</div>
+              <div class="countdown-label">Giây</div>
+            </div>
+          </div>
+          <a href="products.html" class="btn btn-accent btn-lg">Săn Deal Ngay ⚡</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="section-padding" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div>
+            <div class="section-subtitle">Sản phẩm tuyển chọn</div>
+            <h2 class="section-title">Cá Betta Bán Chạy Nhất</h2>
+          </div>
+          <a href="products.html" class="btn btn-outline btn-sm">Xem tất cả &rarr;</a>
+        </div>
+        <div class="grid-cols-4" id="featured-products-grid">
+          <!-- Products loaded via home.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Features -->
+    <section class="container section-padding">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrap">🚚</div>
+          <div class="feature-info">
+            <h4>Giao Hàng Chuyên Dụng</h4>
+            <p>Đóng thùng xốp nén oxy an toàn 72h khắp mọi miền đất nước.</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrap">🛡️</div>
+          <div class="feature-info">
+            <h4>Bảo Hành Sống Khỏe</h4>
+            <p>1 đổi 1 hoặc hoàn tiền 100% nếu có rủi ro khi khui hộp kiểm tra.</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrap">👨‍⚕️</div>
+          <div class="feature-info">
+            <h4>Tư Vấn Dưỡng Cá 24/7</h4>
+            <p>Kinh nghiệm trị bệnh, lên màu, làm nước dưỡng chuẩn nghệ nhân.</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrap">💳</div>
+          <div class="feature-info">
+            <h4>Thanh Toán Linh Hoạt</h4>
+            <p>Hỗ trợ ship COD tận nhà, chuyển khoản ngân hàng hoặc ví điện tử.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;" title="Shop Betta AN Bạc Liêu">
+            <img src="assets/images/logo.png" alt="Shop Betta AN Bạc Liêu" class="brand-logo-img"
+              style="height: 52px;" />
+          </a>
+          <p>
+            Trại cá cảnh Betta BL tự hào là đơn vị phân phối các dòng cá Betta cảnh và phụ kiện thủy sinh cao cấp hàng
+            đầu Bạc Liêu.
+          </p>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">
+            📍 Địa chỉ: Khóm 5, Phường Giá Rai, TP. Cà Mau<br>
+            📞 Hotline: 0857486245<br>
+            ✉ Email: trinhtruongan2004@gmail.com
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Dòng Cá Phổ Biến</h4>
+          <div class="footer-links">
+            <a href="products.html?category=cat_halfmoon">Betta Halfmoon Vây Dài</a>
+            <a href="products.html?category=cat_plakat">Betta Plakat (PK) Chiến</a>
+            <a href="products.html?category=cat_crowntail">Betta Crowntail Đuôi Tưa</a>
+            <a href="products.html?category=cat_wild">Betta Alien Đột Biến</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Chính Sách & Hỗ Trợ</h4>
+          <div class="footer-links">
+            <a href="javascript:void(0)">Chính sách bảo hành cá sống</a>
+            <a href="javascript:void(0)">Quy trình đóng gói vận chuyển</a>
+            <a href="javascript:void(0)">Hướng dẫn chăm sóc cá mới về</a>
+            <a href="javascript:void(0)">Chính sách đổi trả hàng</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Bản Tin Khuyến Mãi</h4>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Đăng ký để nhận thông tin đợt cá mới về và mã giảm giá độc quyền.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Email của bạn..." class="form-input"
+              style="padding: 0.5rem 0.75rem; font-size: 0.85rem;" />
+            <button class="btn btn-primary btn-sm">Gửi</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Shop Betta Bạc Liêu. All rights reserved. Thiết kế hiện đại & tối ưu.</div>
+        <div class="payment-methods">
+          <span class="payment-badge">COD</span>
+          <span class="payment-badge">VNPAY</span>
+          <span class="payment-badge">MOMO</span>
+          <span class="payment-badge">VISA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/components/header.js"></script>
+  <script type="module" src="js/pages/home.js"></script>
+</body>
+
+</html>

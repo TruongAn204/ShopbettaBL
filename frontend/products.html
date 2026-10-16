@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Sản Phẩm - Shop Betta Bạc Liêu</title>
+  <meta name="description" content="Khám phá đầy đủ các dòng cá Betta Halfmoon, Plakat Koi Galaxy, Samurai, hồ cá và phụ kiện thủy sinh cao cấp.">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/product.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" title="Shop Betta AN Bạc Liêu">
+        <img src="assets/images/logo.png" alt="Shop Betta AN Bạc Liêu" class="brand-logo-img" />
+      </a>
+
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="header-search-input" placeholder="Tìm kiếm cá Betta, phụ kiện..." />
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="products.html" class="nav-link active">Sản Phẩm</a>
+        <a href="products.html?category=cat_halfmoon" class="nav-link">Halfmoon</a>
+        <a href="products.html?category=cat_plakat" class="nav-link">Plakat</a>
+        <a href="products.html?category=cat_accessories" class="nav-link">Phụ Kiện</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" id="theme-toggle" title="Đổi giao diện Sáng/Tối">🌙</button>
+        <a href="cart.html" class="action-btn" id="cart-icon-btn" title="Giỏ hàng">
+          🛒
+          <span class="badge-count cart-badge" style="display: none;">0</span>
+        </a>
+        <div class="header-auth-slot">
+          <a href="login.html" class="btn btn-sm btn-primary">Đăng nhập</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section-padding">
+    <!-- Breadcrumb -->
+    <div style="margin-bottom: 1.5rem; font-size: 0.875rem; color: var(--text-muted);">
+      <a href="index.html" style="color: var(--text-secondary);">Trang chủ</a> / <span style="color: var(--primary); font-weight: 600;">Sản phẩm</span>
+    </div>
+
+    <!-- Layout with Sidebar Filter -->
+    <div class="layout-with-sidebar">
+      <!-- Sidebar Filters -->
+      <aside>
+        <div class="filter-card">
+          <div class="filter-title">
+            <span>Dòng Cá / Danh Mục</span>
+          </div>
+          <div class="filter-list">
+            <label class="filter-item">
+              <input type="radio" name="filter-category" value="" id="cat-all" checked />
+              <span>Tất cả danh mục</span>
+            </label>
+            <label class="filter-item">
+              <input type="radio" name="filter-category" value="cat_halfmoon" />
+              <span>Betta Halfmoon</span>
+            </label>
+            <label class="filter-item">
+              <input type="radio" name="filter-category" value="cat_plakat" />
+              <span>Betta Plakat (PK)</span>
+            </label>
+            <label class="filter-item">
+              <input type="radio" name="filter-category" value="cat_crowntail" />
+              <span>Betta Crowntail</span>
+            </label>
+            <label class="filter-item">
+              <input type="radio" name="filter-category" value="cat_wild" />
+              <span>Betta Wild / Alien</span>
+            </label>
+            <label class="filter-item">
+              <input type="radio" name="filter-category" value="cat_food" />
+              <span>Thức ăn dinh dưỡng</span>
+            </label>
+            <label class="filter-item">
+              <input type="radio" name="filter-category" value="cat_accessories" />
+              <span>Hồ & Phụ kiện</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-card">
+          <div class="filter-title">
+            <span>Khoảng Giá (VNĐ)</span>
+          </div>
+          <div class="price-inputs">
+            <input type="number" id="filter-min-price" placeholder="Từ" />
+            <span>-</span>
+            <input type="number" id="filter-max-price" placeholder="Đến" />
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" id="btn-apply-price" style="margin-top: 0.75rem;">
+            Áp dụng giá
+          </button>
+        </div>
+
+        <button class="btn btn-secondary btn-block" id="btn-reset-filters">
+          🔄 Đặt lại bộ lọc
+        </button>
+      </aside>
+
+      <!-- Main Catalog Content -->
+      <section>
+        <!-- Toolbar -->
+        <div class="catalog-toolbar">
+          <div class="catalog-info" id="catalog-result-count">
+            Đang tải dữ liệu...
+          </div>
+          <div class="catalog-sort">
+            <label for="catalog-sort-select">Sắp xếp theo:</label>
+            <select id="catalog-sort-select" class="form-select" style="padding: 0.4rem 0.8rem; font-size: 0.875rem;">
+              <option value="newest">Mới nhất</option>
+              <option value="price-asc">Giá: Thấp đến Cao</option>
+              <option value="price-desc">Giá: Cao đến Thấp</option>
+              <option value="rating">Đánh giá cao nhất</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid-cols-3" id="catalog-products-grid">
+          <!-- Loaded dynamically via products.js -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <div>© 2026 Shop Betta Bạc Liêu. Cá cảnh thuần chủng & phụ kiện thủy sinh.</div>
+      <div class="payment-methods">
+        <span class="payment-badge">COD</span>
+        <span class="payment-badge">VNPAY</span>
+        <span class="payment-badge">MOMO</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/components/header.js"></script>
+  <script type="module" src="js/pages/products.js"></script>
+</body>
+</html>
